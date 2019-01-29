@@ -45,7 +45,7 @@ namespace Northwind.WebUI
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPreProcessorBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestPerformanceBehaviour<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
-            services.AddMediatR(typeof(GetProductQueryHandler).GetTypeInfo().Assembly);            
+            services.AddMediatR(typeof(GetProductQueryHandler).GetTypeInfo().Assembly);
 
             // Add DbContext using SQL Server Provider
             services.AddDbContext<NorthwindDbContext>(options =>
